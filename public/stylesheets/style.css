@@ -15,9 +15,14 @@ a {
 
 body{
   text-align:center;
-  background: #00ff00 url('http://www.hdwallpapersinhd.net/wp-content/uploads/2013/10/Blue-Shine-HD-Wallpaper-Background-For-Computer-Wallpaper.jpg') no-repeat fixed center; 
 }
 
 tabla1,tabla2,tabla3{
   text-align:center;
+}
+*{
+ text-align:center;
+}
+h1,h2,h3 {
+   text-shadow: 5px 5px 10px black;
 }
