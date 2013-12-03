@@ -19,7 +19,7 @@ body{
 p{
 font-size:120%;
 }
-tabla1,tabla2,tabla3,tabla4 {
+#tabla1,#tabla2,#tabla3,#tabla4 {
   text-align:center;
     width:70%; 
     margin-left:15%; 
