@@ -80,7 +80,7 @@ html(lang="en")
 
 			h3 Estadisticas de Gastos
 			div(id="tabla4", style="width:700px; height: 400px;")
-			table 
+			table
 					tr
 						td(id="media").
 							Gasto medio = 
