@@ -15,8 +15,6 @@ html(lang="en")
 		
 				br
 				br
-				br
-				br
 				text.
 					Mes a analizar: 
 				select(id='indexMes')
@@ -35,8 +33,6 @@ html(lang="en")
 					option(value='201304-Abril, 2013').
 						Abril, 2013
 		
-				br
-				br
 				br
 				br
 		
@@ -80,8 +76,6 @@ html(lang="en")
 					option(value='es_travel-Viajes').
 						Viajes
 		
-				br
-				br
 				br
 				br
 		
