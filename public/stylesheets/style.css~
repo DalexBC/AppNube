@@ -2,7 +2,7 @@
 
   text-align:center
   padding: 50px;
-  text-shadow: 2px 2px #ff0000;
+  text-shadow: 2px 2px #000000;
   border:5px;
   border-style:solid;
   border-color:#036583;
@@ -11,4 +11,8 @@
 
 a {
   color: #00B7FF;
+}
+
+body{
+  text-align:center;
 }
