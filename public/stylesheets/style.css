@@ -1,6 +1,11 @@
 #content {
-  background-color:blue;
+
+  text-align:center
   padding: 50px;
+  text-shadow: 2px 2px #000000;
+  border:5px;
+  border-style:solid;
+  border-color:#036583;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
