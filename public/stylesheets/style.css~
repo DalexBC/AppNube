@@ -25,6 +25,9 @@ tabla1,tabla2,tabla3,tabla4 {
     margin-left:15%; 
     margin-right:15%;
 }
+td {
+	text-align:center;
+}
 *{
  text-align:center;
 }
