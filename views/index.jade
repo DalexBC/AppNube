@@ -1,0 +1,80 @@
+doctype 5
+html(lang="en")
+	head
+		title Consulta de datos servicio BBVA
+		link(rel='stylesheet', href='/stylesheets/style.css')
+		script(src='/javascripts/index.js')
+	body
+		#content
+			h1 An&aacute;lisis de caracter&iacute;sticas en Espa&ntilde;a
+	
+			form(id='indexForm')
+				text.
+					C&oacute;digo Postal del negocio: 
+				input(id='indexCP', type='text', maxlength='5', onkeypress='numberValidator(event)')
+		
+				br
+		
+				text.
+					Mes a analizar: 
+				select(id='indexMes')
+					option(value='', style='display:none;')
+				
+					option(value='201211-Noviembre, 2012').
+						Noviembre, 2012
+					option(value='201212-Diciembre, 2012').
+						Diciembre, 2012
+					option(value='201301-Enero, 2013').
+						Enero, 2013
+					option(value='201302-Febrero, 2013').
+						Febrero, 2013
+					option(value='201303-Marzo, 2013').
+						Marzo, 2013
+					option(value='201304-Abril, 2013').
+						Abril, 2013
+		
+				br
+		
+				text.
+					Giro del negocio:
+				select(id='indexGiro')
+					option(value='', style='display:none;')
+			
+					option(value='es_auto-Automotriz').
+						Automotriz
+					option(value='es_barsandrestaurants-Bares y restaurantes').
+						Bares y restaurantes
+					option(value='es_propertyservices-Bienes raices').
+						Bienes raices
+					option(value='es_food-Comida').
+						Comida
+					option(value='es_wellnessandbeauty-Cuidado personal y belleza').
+						Cuidado personal y belleza
+					option(value='es_sportsandtoys-Deportes y juguetes').
+						Deportes y juguetes
+					option(value='es_leisure-Entretenimiento').
+						Entretenimiento
+					option(value='es_hyper-Hipermercados').
+						Hipermercados
+					option(value='es_home-Hogar').
+						Hogar
+					option(value='es_hotelservices-Hotles y hospedaje').
+						Hotles y hospedaje
+					option(value='es_contents-Libros y prensa').
+						Libros y prensa
+					option(value='es_fashion-Moda').
+						Moda
+					option(value='es_otherservices-Otros servicios').
+						Otros servicios
+					option(value='es_health-Salud').
+						Salud
+					option(value='es_transportation-Transporte').
+						Transporte
+					option(value='es_tech-Tecnolog&iacute;a').
+						Tecnolog&iacute;a
+					option(value='es_travel-Viajes').
+						Viajes
+		
+				br
+		
+				input(type='button', onclick='goToGraph()', value='Submit').

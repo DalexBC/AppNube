@@ -1,0 +1,116 @@
+doctype 5
+html(lang="en")
+	head
+		title Consulta de datos servicio BBVA
+		link(rel='stylesheet', href='/stylesheets/style.css')
+		script(type="text/javascript", src="https://www.google.com/jsapi")
+	
+		script.
+			var jsonData =#{objeto};
+
+			//primero se necesita validar que el resultado no haya dado error
+			if(jsonData.status == 'error'){
+				alert('No se puedo encontrar informacion para dichos datos\n' +
+					'Puede ser que no exista el codigo postal especificado\n' +
+					'Por favor, vuelva a intentarlo');
+				window.location = '/';
+			}
+
+			//codigo para grafica1
+			google.load("visualization", "1", {packages:["corechart"]});
+			google.setOnLoadCallback(drawChart1);
+			function drawChart1() {
+				var data = google.visualization.arrayToDataTable(jsonData.query1.grafica1);
+
+				var options = {
+					hAxis: {title: 'Dia',  titleTextStyle: {color: '#333'}},
+					vAxis: {minValue: 0}
+				};
+
+				var chart = new google.visualization.AreaChart(document.getElementById('tabla1'));
+				chart.draw(data, options);
+			}
+
+
+			//codigo para grafica2
+			google.load("visualization", "1", {packages:["corechart"]});
+			google.setOnLoadCallback(drawChart2);
+			function drawChart2() {
+				var data = google.visualization.arrayToDataTable(jsonData.query2.grafica2);
+
+				var options = {
+					pieHole: 0.4,
+				};
+
+				var chart = new google.visualization.PieChart(document.getElementById('tabla2'));
+				chart.draw(data, options);
+			}
+
+		
+			//codigo para grafica3
+			google.load('visualization', '1', {packages:['table']});
+			google.setOnLoadCallback(drawTable3);
+			function drawTable3() {
+				var data = new google.visualization.DataTable();
+				data.addColumn('string', 'Codigo postal');
+				data.addColumn('number', 'Gasto total');
+				data.addColumn('number', 'Numero de transacciones');
+				data.addColumn('number', 'Tarjetas distintas involucradas');
+				data.addRows(jsonData.query3.grafica3);
+
+				var table = new google.visualization.Table(document.getElementById('tabla3'));
+				table.draw(data, {showRowNumber: true});
+			}
+
+
+			//funciones javascript que no se ejecutan en onLoadDocument
+			function confirmar(){
+				return "Confirmo";
+			}
+
+			function setText(element, text){
+				element.innerHTML = text;
+			}
+	body
+		#content
+			h2 Presentando estadist&iacute;cas de:
+			p(id='giro')
+			p(id='mes')
+			p(id='cp')
+
+			h3 Estadisticas de Gastos
+
+			table
+					tr
+						td(id="media").
+							Gasto medio = 
+						td(id="min").
+							Gasto minimo =
+						td(id="max").
+							Gasto maximo = 
+						td(id="numTrans").
+							Numero de transacciones efectuadas =
+		
+			h3 Gasto por d&iacute;a
+			text (Provee informaci&oacute;n de cuando asignar m&aacute;s personal o cuando cerrar el negocio) 
+			div(id="tabla1", style="width:700px; height: 300px")
+
+			h3 N&uacute;mero de transacciones por sector demogr&aacute;fico
+			text (Sugiere a qu&eacute; sector demogr&aacute;fico debe ir enfocados los productos y el estilo del negocio)
+			div(id='tabla2', style="width:700px; height: 400px;")
+
+			h3 C&oacute;digos Postales de los clientes m&aacute;s activos
+			p (Especula cu&aacute;les son las regiones en las que la publicidad generar&iacute;a un mayor impacto)
+			#tabla3
+
+		script.
+			
+			var jsonData =#{objeto};
+			//codigo para stats iniciales
+			document.getElementById("media").innerHTML		= "<strong>Media</strong> = " + jsonData.query1.media.substring(0, jsonData.query1.media.indexOf('.') + 3)
+			document.getElementById("min").innerHTML		= "<strong>Min</strong> = " + jsonData.query1.min;
+			document.getElementById("max").innerHTML		= "<strong>Max</strong> = " + jsonData.query1.max;
+			document.getElementById("numTrans").innerHTML	= "<strong>N&uacute;mero de transacciones</strong> = " + jsonData.query1.num_pagos;
+			document.getElementById("giro").innerHTML		= "<strong>Negocio: </strong>" + jsonData.query1.giro;
+			document.getElementById("mes").innerHTML		= "<strong>En el mes de: </strong>" + jsonData.query1.mes;
+			document.getElementById("cp").innerHTML			= "<strong>Dentro del c&oacute;digo postal: </strong>" + jsonData.query1.cp;

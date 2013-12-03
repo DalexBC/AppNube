@@ -1,0 +1,7 @@
+En este ejemplo se muestra el template para hacer una aplicación basada en express
+que representa los datos en una gráfica de barras
+
+probar
+
+servidor:8080/
+servidor:8080/grafica
