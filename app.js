@@ -11,6 +11,7 @@ var http = require('http');
 var path = require('path');
 
 var app = express();
+app.use(express.logger());
 
 // all environments
 app.set('port', process.env.PORT || 8080);
