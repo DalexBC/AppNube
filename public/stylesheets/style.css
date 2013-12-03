@@ -16,7 +16,7 @@ a {
 body{
   text-align:center;
   background: #FFFFFF url('http://www.fondosdepantalla.biz/images/wallpapers/abstract-white-wallpaper-644891.jpeg') no-repeat;
-  background-size:100% 100%; 
+  background-size:contain; 
 }
 p{
 font-size:120%;
