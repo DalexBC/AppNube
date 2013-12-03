@@ -15,8 +15,8 @@ a {
 
 body{
   text-align:center;
-  background: #FFFFFF url('http://fc07.deviantart.net/fs71/f/2012/312/f/c/abstract_wallpaper_blue_and_white_by_phoenixrising23-d5kew2v.jpg') repeat;
-  background-size: contain;
+  background: #FFFFFF url('http://elitetshirts.com/wp-content/uploads/2012/03/blue-and-white-background-blue-white-background-1600x1200.jpg') repeat;
+  background-size: 100% 100%;
 }
 p{
 font-size:120%;

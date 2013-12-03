@@ -16,7 +16,7 @@ a {
 body{
   text-align:center;
   background: #FFFFFF url('http://elitetshirts.com/wp-content/uploads/2012/03/blue-and-white-background-blue-white-background-1600x1200.jpg') repeat;
-  background-size: 100% 100%;
+  background-size: cover;
 }
 p{
 font-size:120%;
