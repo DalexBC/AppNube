@@ -16,11 +16,11 @@ a {
 body{
   text-align:center;
 }
-
+p{
+font-size:120%;
+}
 tabla1,tabla2,tabla3,tabla4 {
   text-align:center;
-   margin-left:auto; 
-    margin-right:auto;
     width:70%; 
     margin-left:15%; 
     margin-right:15%;
@@ -30,7 +30,6 @@ tabla1,tabla2,tabla3,tabla4 {
 }
 h1,h2,h3 {
    text-shadow: 5px 5px 10px black;
+font-size:200%;
 }
-h1 {
-   
-}
+
