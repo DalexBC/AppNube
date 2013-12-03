@@ -16,7 +16,7 @@ a {
 body{
   text-align:center;
   background: #FFFFFF url('http://www.ehdwalls.com/plog-content/images/1024x768/abstract/abstract-blue-backgrounds-23_1024x768_71470.jpg') repeat;
-  background-size: cover;
+  background-size: 1024px 768px;
 }
 p{
 font-size:120%;
